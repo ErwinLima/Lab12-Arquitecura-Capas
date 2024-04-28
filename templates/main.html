@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>Lights Please</title>
+  </head>
+  <body>
+    <div class="container-fluid text-center background">
+      <div class="row">
+        <div class="col-md-12 text-light">
+          <h1 class="display-3 text-light">Lights Please</h1>
+          <hr />
+          <h1 class="text-light">Encendido de Luces</h1>
+          <p class="text-light">Enciende las luces de la sala.</p>
+
+          <form action="/encender" method="post">
+            <button type="submit" name="submit" class="btn btn-primary" value="add">Encender</button>
+          </form>
+          <div class="mb-5"></div>
+          <form action="/apagar" method="post">
+            <button type="submit" name="submit" class="btn btn-danger" value="add">Apagar</button>
+          </form>
+          <h1 id="texto">{{texto}}</h1>
+          <script type="text/javascript">
+            function datoEnviado() {
+              const miTexto = document.getElementById("texto");
+              miTexto.style.display = "block";
+              miTexto.innerText = "Dato enviado";
+              document.body.appendChild(miTexto);
+            }
+          </script>
+          <hr />
+          <p>All rights reserved &copy; 2024</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
